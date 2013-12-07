@@ -27,9 +27,16 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Provides backward compatibilty for mass assignment from Rails 3
+gem 'protected_attributes'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development, :test do
+	gem 'rspec-rails'
 end
 
 # Use ActiveModel has_secure_password
